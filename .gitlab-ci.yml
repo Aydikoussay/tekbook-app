@@ -9,9 +9,12 @@ compile:
   stage: build
   script:
     - mvn -B package -DskipTests
-    - ls -lh target/*.jar
+  artifacts:
+    paths:
+      - target/*.jar
+    expire_in: 1 week
 
-package-check:
+unit-tests:
   stage: test
   script:
-    - ls -lh target/*.jar
+    - mvn -B test
