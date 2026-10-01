@@ -77,7 +77,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # NOUVEAU : Convertir le nom du dépôt en minuscules pour Docker
       - name: Lowercase repository name
         run: echo "REPO_LOWER=${GITHUB_REPOSITORY,,}" >> $GITHUB_ENV
 
