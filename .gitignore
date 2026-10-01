@@ -9,3 +9,7 @@ Dockerfile
 .env
 target/
 .m2/
+compose-final.txt
+config-base.txt
+config-override.txt
+scan.txt
