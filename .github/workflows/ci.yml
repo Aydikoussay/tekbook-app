@@ -82,16 +82,3 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ env.REPO_LOWER }}:${{ github.sha }}
-
-  leak-demo:
-    runs-on: ubuntu-latest
-    steps:
-      - name: 1 direct (sera masque)
-        run: |
-          echo "1 direct : ${{ secrets.DEMO_TOKEN }}"
-      - name: 2 base64 (sera expose !)
-        run: |
-          echo "2 base64 : $(echo -n '${{ secrets.DEMO_TOKEN }}' | base64)"
-      - name: 3 caracteres (sera expose !)
-        run: |
-          echo "3 caracteres : $(echo -n '${{ secrets.DEMO_TOKEN }}' | fold -w1 | tr '\n' ' ')"
