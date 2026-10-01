@@ -1,20 +1,21 @@
+# Fichiers de build Java
 target/
 *.class
+
+# IDE
 .idea/
 .vscode/
 .DS_Store
-Dockerfile
-.dockerignore
+
+# Secrets et configs locales
 .env
-.env
-target/
-.m2/
-compose-final.txt
-config-base.txt
-config-override.txt
-scan.txt
-compose-final.txt
-config-base.txt
-config-override.txt
-scan.txt
 src/main/resources/application-local.properties
+
+# Fichiers générés par les labs (contiennent des secrets interpolés)
+compose-final.txt
+config-base.txt
+config-override.txt
+scan.txt
+
+# Cache Maven
+.m2/
